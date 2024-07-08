@@ -1,0 +1,156 @@
+@import "_mixins";
+
+// ***SETTINGS***
+@font-face {
+	font-family: "Monogram";
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+	src: url(../assets/font-monogram.woff2) format("woff2");
+}
+
+:root {
+	--cr-black: #000;
+	--cr-white: #FFF;
+	--cr-background: #1a1a0e;
+	--cr-highlight: #E3FF24;
+
+	--cr-accent: var(--cr-black);
+
+	/* Heading Styles */
+	--t-b-1: 400 Max(2.2vw,16px)/1 "Monogram", monospace;
+	--t-b-2: 400 Max(1.2vw,12px)/1 "Monogram", monospace;
+
+	--w-1: 1500px;
+	--w-2: 1200px;
+	--w-3: 900px;
+	--w-4: 560px;
+	--w-5: 330px;
+
+	--s-section: 100px;
+	--s-contain: Max(1.5vw, 16px);
+	--s-contain-max: 2400px;
+	--s-edge: Max(var(--s-contain), calc((100vw - var(--s-contain-max)) / 2));
+	--s-main-min-height: calc(
+		100svh - var(--s-announcement, 0px) - var(--s-header, 0px) -
+			var(--s-footer, 0px)
+	); // Set minimum container height to fill screen, keeping footer at bottom.
+
+	--border-width: 2px;
+	--border-radius-small: 8px;
+	--border-radius-medium: 16px;
+	--border-radius-large: 24px;
+}
+
+// scroll positioning anchoring
+html {
+	scroll-padding-top: calc(
+		var(--s-announcement, 0px) + var(--s-header, 0px) + 20px
+	);
+}
+
+// for fixed header and announcement
+body {
+	padding-top: calc(var(--s-init-header) + var(--s-announcement));
+}
+
+::selection {
+	text-shadow: none;
+	background-color: var(--cr-black);
+	color: var(--cr-white);
+}
+
+// ***COLORS***
+
+html {
+	background-color: var(--cr-background);
+	color: var(--cr-white);
+}
+
+.cr-accent {
+	color: var(--cr-accent);
+}
+.cr-black {
+	color: var(--cr-black);
+}
+.cr-white {
+	color: var(--cr-white);
+}
+.cr-highlight {
+	color: var(--cr-highlight);
+}
+
+.bg-accent {
+	background-color: var(--cr-accent);
+}
+.bg-black {
+	background-color: var(--cr-black);
+}
+.bg-white {
+	background-color: var(--cr-white);
+}
+.bg-highlight {
+	color: var(--cr-highlight);
+}
+
+// ***TYPOGRAPHY***
+
+body {
+	font: var(--t-b-1);
+	letter-spacing: 0.02em;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font: var(--t-b-1);
+	text-wrap: balance;
+	letter-spacing: -0.02em;
+}
+
+.t-b-1 {
+	font: var(--t-b-1);
+}
+
+.t-b-2 {
+	font: var(--t-b-2);
+}
+
+.t-uppercase {
+	text-transform: uppercase;
+}
+
+.t-center {
+	text-align: center;
+}
+
+.t-italic {
+	font-style: italic;
+}
+
+.t-nowrap {
+	white-space: nowrap;
+}
+
+.t-line-through {
+	text-decoration: line-through;
+}
+
+p,
+ol,
+ul {
+	text-wrap: pretty;
+}
+
+// ***BUTTONS***
+
+.btn[disabled],
+button[disabled],
+input[disabled] {
+	opacity: 0.6;
+	cursor: not-allowed;
+}

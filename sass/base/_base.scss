@@ -1,0 +1,42 @@
+/* BASIC RESET AND GLOBAL STYLE */
+ *,
+ *::after,
+ *::before {
+ 	margin: 0;
+ 	padding: 0;
+ 	/*force inheritance on all elements inside body*/
+ 	box-sizing: inherit;
+ }
+
+html {
+	/*don't use px so that the user's defauly settings take precedent*/
+	/*defines what 1rem is*/
+	font-size: 62.5%; // 10px
+
+	@include respond(tablet) {
+		font-size: 56.25%; //1rem = 9px
+	}
+
+	@include respond(big-desktop) {
+		font-size: 75%; //1rem = 12px
+	}
+}
+
+ body {
+ 	box-sizing: border-box;
+
+ 	@include respond(tablet) {
+		padding: 0rem;
+	}
+ }
+
+ // ::selection {
+ // 	background-color: $color-primary;
+ // 	color: $color-white;
+ // }
+
+ 
+
+ 
+
+ 

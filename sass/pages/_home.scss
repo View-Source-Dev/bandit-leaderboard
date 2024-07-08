@@ -1,0 +1,79 @@
+main {
+	position: relative;
+	padding: var(--s-edge);
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--s-edge) * 1.25);
+	
+	min-height: 100vh;
+	min-height: 100svh;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url(../assets/img-noise.png);
+		opacity: .1;
+		pointer-events: none;
+	}
+}
+
+.section {
+	flex: 1;
+	padding: calc(var(--s-edge) * .75) var(--s-edge);
+	background-color: rgba(255,255,255,.2);
+	text-transform: uppercase;
+	overflow-x: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.caption {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: calc(var(--s-edge) * .5);
+}
+
+.table {
+	flex: 1;
+	--padding: .5vh;
+	--padding: .5svh;
+	width: 100%;
+
+	th,
+	td {
+		text-align: left;
+
+		&:not(:first-child) {
+			padding-left: var(--padding);
+		}
+
+		&:not(:last-child) {
+			padding-right: var(--padding);
+		}
+
+		&:nth-of-type(1) {
+			width: 10%;
+		}
+		&:nth-of-type(2) {
+			width: 17.5%;
+		}
+		&:nth-of-type(3) {
+			width: 30%;
+		}
+		&:nth-of-type(4) {
+			width: 15%;
+		}
+		&:nth-of-type(5) {
+			width: 17.5%;
+		}
+		&:nth-of-type(6) {
+			width: 10%;
+		}
+	}
+	
+}

@@ -1,0 +1,24 @@
+/*
+MEDIA QUERY MANAGER
+
+ORDER:
+1) Base + type
+2) General layout + grid
+3) Page layout
+4) Components 
+*/
+
+@mixin respond($breakpoint) {
+	// 600px
+	@if $breakpoint == phone {
+		@media only screen and (max-width:37.5em) { @content };
+	}
+	// 1080px
+	@if $breakpoint == tablet {
+		@media only screen and (max-width: 67.5em) { @content };
+	}
+	// 1800px
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 112.5em) { @content };
+	}
+}
