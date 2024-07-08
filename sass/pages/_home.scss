@@ -1,9 +1,9 @@
 main {
 	position: relative;
-	padding: var(--s-edge);
+	padding: var(--s-contain);
 	display: flex;
 	flex-direction: column;
-	gap: calc(var(--s-edge) * 1.25);
+	gap: calc(var(--s-contain) * 1.25);
 	
 	min-height: 100vh;
 	min-height: 100svh;
@@ -23,7 +23,7 @@ main {
 
 .section {
 	flex: 1;
-	padding: calc(var(--s-edge) * .75) var(--s-edge);
+	padding: calc(var(--s-contain) * .75) var(--s-contain);
 	background-color: rgba(255,255,255,.2);
 	text-transform: uppercase;
 	overflow-x: auto;
@@ -35,7 +35,7 @@ main {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: calc(var(--s-edge) * .5);
+	margin-bottom: calc(var(--s-contain) * .5);
 }
 
 .table {
@@ -43,6 +43,11 @@ main {
 	--padding: .5vh;
 	--padding: .5svh;
 	width: 100%;
+
+	tr {
+		max-height: 1em;
+		flex: none;
+	}
 
 	th,
 	td {

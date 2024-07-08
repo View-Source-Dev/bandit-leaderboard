@@ -29,8 +29,6 @@
 
 	--s-section: 100px;
 	--s-contain: Max(1.5vw, 16px);
-	--s-contain-max: 2400px;
-	--s-edge: Max(var(--s-contain), calc((100vw - var(--s-contain-max)) / 2));
 	--s-main-min-height: calc(
 		100svh - var(--s-announcement, 0px) - var(--s-header, 0px) -
 			var(--s-footer, 0px)
