@@ -9,7 +9,6 @@ const createRow = (data, index) => {
 			<tr class="table-row">
 				<td>${data[index].first_name || ''}</td>
 				<td>${data[index].last_name  || ''}</td>
-				<td>${data[index].email  || ''}</td>
 				<td>${data[index].borough  || ''}</td>
 				<td>${data[index].pr  || ''}</td>
 				<td>${data[index].goal  || ''}</td>
