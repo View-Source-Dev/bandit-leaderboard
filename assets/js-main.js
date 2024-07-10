@@ -7,11 +7,12 @@ const createRow = (data, index) => {
 	data[index] ?
 		`
 			<tr class="table-row">
-				<td>${data[index].first_name || ''}</td>
-				<td>${data[index].last_name  || ''}</td>
-				<td>${data[index].borough  || ''}</td>
-				<td>${data[index].pr  || ''}</td>
-				<td>${data[index].goal  || ''}</td>
+				<td><div>${data[index].num || ''}</div></td>
+				<td><div>${data[index].initial || ''}</div></td>
+				<td><div>${data[index].last_name  || ''}</div></td>
+				<td><div>${data[index].borough  || ''}</div></td>
+				<td><div>${data[index].pr  || ''}</div></td>
+				<td><div>${data[index].goal  || ''}</div></td>
 			</tr>
 		`
 		: ''
@@ -42,7 +43,7 @@ const renderItems = data => {
 
 		setTimeout(() => {
 			renderBlock(currentBlock + 1);
-		}, interval );
+		}, interval);
 
 	};
 
