@@ -56,7 +56,7 @@ float getTexture(vec2 uv, float time) {
   return specs;
 }
 
-const float scale = 512.0;
+const float scale = 800.0;
 float noise(in vec2 x) {
   vec2 p = floor(x);
   vec2 f = fract(x);
