@@ -42,7 +42,7 @@ const generateCanvas = (canvas, i, hardRestart) => {
 
 	const setupShader = async () => {
 		try {
-			const response = await fetch("/assets/shader.frag");
+			const response = await fetch("assets/shader.frag");
 			fragmentShaderSource = await response.text();
 			if (!fragmentShaderSource) {
 				console.error("Fragment shader not loaded");
@@ -152,7 +152,7 @@ const generateCanvas = (canvas, i, hardRestart) => {
 				render();
 			};
 			image.crossOrigin = "use-credentials";
-			image.src = "/assets/img-noise.png";
+			image.src = "assets/img-noise.png";
 		} catch (err) {
 			console.error("Error loading the shader:", err);
 		}
