@@ -7,12 +7,12 @@ const generateCanvas = (canvas, i, hardRestart) => {
 	const frameDuration = 1000 / 30;
 	let colorThemes = [
 		{
-			foreground: '#0105FF', // blue
-			background: '#050701', // offblack
+			foreground: '#021CEE', // blue
+			background: '#0C0C0C', // offblack
 		},
 		{
-			foreground: '#D6D7B5', // white-yellow
-			background: '#0105FF', // blue
+			foreground: '#D1D2D1', // gray
+			background: '#021CEE', // blue
 		}
 	];
 	let currentThemeIndex = 0;
