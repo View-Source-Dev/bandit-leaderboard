@@ -3,16 +3,16 @@ const canvases = document.querySelectorAll(".js-swirl-canvas");
 const generateCanvas = (canvas, i, hardRestart) => {
 	let transitionProgress = 0;
 	const transitionDuration = 1.5; // x 2 = total seconds
-	let time = Math.random() * 1000 - 500;
+	let time = Math.random() * 200;
 	const frameDuration = 1000 / 30;
 	let colorThemes = [
 		{
-			foreground: '#021CEE', // blue
-			background: '#0C0C0C', // offblack
-		},
-		{
 			foreground: '#D1D2D1', // gray
 			background: '#021CEE', // blue
+		},
+		{
+			foreground: '#021CEE', // blue
+			background: '#0C0C0C', // offblack
 		}
 	];
 	let currentThemeIndex = 0;
