@@ -52,7 +52,7 @@ const renderItems = data => {
 };
 
 
-fetch('assets/data.json')
+fetch('assets/data-2025-2.json')
 	.then(response => response.json())
 	.then(data => {
 		// And passes the data to the function, above!
